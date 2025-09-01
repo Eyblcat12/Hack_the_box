@@ -8,7 +8,7 @@
 /media	Các thiết bị lưu trữ ngoài như ổ USB được gắn ở đây.
 /mnt	Điểm gắn kết tạm thời cho các hệ thống tập tin thông thường.
 /opt	Các tập tin tùy chọn như công cụ của bên thứ ba có thể được lưu tại đây.
-/root	Thư mục gốc của người dùng root.
+
 /sbin	Thư mục này chứa các tệp thực thi được sử dụng cho quản trị hệ thống (tệp hệ thống nhị phân).
 /tmp	Hệ điều hành và nhiều chương trình sử dụng thư mục này để lưu trữ các tệp tạm thời. Thư mục này thường được xóa khi khởi động hệ thống và có thể bị xóa vào những thời điểm khác mà không cần cảnh báo trước.
 /usr	Chứa các tệp thực thi, thư viện, tệp man, v.v.
@@ -53,5 +53,94 @@ lsusb	Liệt kê các thiết bị USB
 lsof	Liệt kê các tập tin đã mở.
 lspci	Liệt kê các thiết bị PCI.
 
+ man <tool>	Mở trang hướng dẫn sử dụng cho công cụ được chỉ định.
+<tool> -h	In trang trợ giúp của công cụ.
+apropos <keyword>	Tìm kiếm thông qua phần mô tả của trang hướng dẫn để tìm các trường hợp của một từ khóa nhất định.
+cat	Nối và in các tập tin.
+whoami	Hiển thị tên người dùng hiện tại.
+id	Trả về danh tính người dùng.
+hostname	Đặt hoặc in tên của hệ thống máy chủ hiện tại.
+uname	In tên hệ điều hành.
+pwd	Trả về tên thư mục làm việc.
+ifconfig	Tiện ích này ifconfigđược sử dụng để gán hoặc xem địa chỉ cho giao diện mạng và/hoặc cấu hình các tham số giao diện mạng.
+ip	IP là một tiện ích để hiển thị hoặc thao tác định tuyến, thiết bị mạng, giao diện và đường hầm.
+netstat	Hiển thị trạng thái mạng.
+ss	Một tiện ích khác để điều tra ổ cắm.
+ps	Hiển thị trạng thái tiến trình.
+who	Hiển thị người đã đăng nhập.
+env	In môi trường hoặc thiết lập và thực thi lệnh.
+lsblk	Liệt kê các thiết bị khối.
+lsusb	Liệt kê các thiết bị USB.
+lsof	Liệt kê các tập tin đã mở.
+lspci	Liệt kê các thiết bị PCI.
+sudo	Thực hiện lệnh với tư cách là người dùng khác.
+su	Tiện suích yêu cầu thông tin đăng nhập người dùng phù hợp thông qua PAM và chuyển sang ID người dùng đó (người dùng mặc định là siêu người dùng). Sau đó, một shell sẽ được thực thi.
+useradd	Tạo người dùng mới hoặc cập nhật thông tin người dùng mới mặc định.
+userdel	Xóa tài khoản người dùng và các tệp liên quan.
+usermod	Sửa đổi tài khoản người dùng.
+addgroup	Thêm một nhóm vào hệ thống.
+delgroup	Xóa một nhóm khỏi hệ thống.
+passwd	Thay đổi mật khẩu người dùng.
+dpkg	Cài đặt, gỡ bỏ và cấu hình các gói dựa trên Debian.
+apt	Tiện ích dòng lệnh quản lý gói cấp cao.
+aptitude	Thay thế cho apt.
+snap	Cài đặt, gỡ bỏ và cấu hình các gói snap.
+gem	Trình quản lý gói chuẩn cho Ruby.
+pip	Trình quản lý gói chuẩn cho Python.
+git	Tiện ích dòng lệnh của hệ thống kiểm soát sửa đổi.
+systemctl	Dịch vụ dựa trên dòng lệnh và trình quản lý điều khiển systemd.
+ps	In ảnh chụp nhanh các tiến trình hiện tại.
+journalctl	Truy vấn nhật ký systemd.
+kill	Gửi tín hiệu đến một tiến trình.
+bg	Đưa một tiến trình vào nền.
+jobs	Liệt kê tất cả các tiến trình đang chạy ở chế độ nền.
+fg	Đưa một tiến trình vào phía trước.
+curl	Tiện ích dòng lệnh để truyền dữ liệu từ hoặc đến máy chủ.
+wget	Một giải pháp thay curlthế là tải xuống các tập tin từ máy chủ FTP hoặc HTTP(s).
+python3 -m http.server	Khởi động máy chủ web Python3 trên cổng TCP 8000.
+ls	Liệt kê nội dung thư mục.
+cd	Thay đổi thư mục.
+clear	Xóa thiết bị đầu cuối.
+touch	Tạo một tập tin trống.
+mkdir	Tạo một thư mục.
+tree	Liệt kê nội dung của một thư mục theo cách đệ quy.
+mv	Di chuyển hoặc đổi tên tệp hoặc thư mục.
+cp	Sao chép tập tin hoặc thư mục.
+nano	Trình soạn thảo văn bản dựa trên thiết bị đầu cuối.
+which	Trả về đường dẫn đến tệp hoặc liên kết.
+find	Tìm kiếm các tập tin trong hệ thống phân cấp thư mục.
+updatedb	Cập nhật cơ sở dữ liệu địa phương cho nội dung hiện có trên hệ thống.
+locate	Sử dụng cơ sở dữ liệu địa phương để tìm nội dung trên hệ thống.
+more	Bộ định tuyến được sử dụng để đọc STDOUT hoặc tệp.
+less	Một giải pháp thay thế morecó nhiều tính năng hơn.
+head	In ra mười dòng đầu tiên của STDOUT hoặc một tệp.
+tail	In ra mười dòng cuối cùng của STDOUT hoặc một tệp.
+sort	Sắp xếp nội dung của STDOUT hoặc một tệp.
+grep	Tìm kiếm kết quả cụ thể có chứa các mẫu nhất định.
+cut	Xóa các phần khỏi mỗi dòng tệp.
+tr	Thay thế một số ký tự nhất định.
+column	Tiện ích dựa trên dòng lệnh định dạng dữ liệu đầu vào thành nhiều cột.
+awk	Ngôn ngữ quét và xử lý mẫu.
+sed	Trình soạn thảo luồng để lọc và chuyển đổi văn bản.
+wc	In ra số dòng mới, từ và byte cho một đầu vào nhất định.
+chmod	Thay đổi quyền của một tập tin hoặc thư mục.
+chown	Thay đổi chủ sở hữu và nhóm của tệp hoặc thư mục.
+
+ls -i : liệt kê inode
+ls -lt: liệt kê thư mục đổi tên gần đây nhất
+Làm việc với Tệp và Thư mục
+duchn12@htb[/htb]$ mkdir -p Storage/local/user/documents : tạo nguyên 1 cây thư mục
 
 
+duchn12@htb[/htb]$ which python
+
+/usr/bin/python
+
+find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null  
+-type f	Ở đây, chúng tôi định nghĩa loại đối tượng được tìm kiếm. Trong trường hợp này, ' f' là viết tắt của ' file'.
+-name *.conf	Với ' -name', chúng ta chỉ ra tên tệp chúng ta đang tìm kiếm. Dấu hoa thị ( *) tượng trưng cho 'tất cả' tệp có .confphần mở rộng ' '.
+-user root	Tùy chọn này lọc tất cả các tệp có chủ sở hữu là người dùng root.
+-size +20k	Sau đó, chúng ta có thể lọc tất cả các tệp đã định vị và chỉ định rằng chúng ta chỉ muốn xem các tệp lớn hơn 20 KiB.
+-newermt 2020-03-03	Với tùy chọn này, chúng tôi sẽ thiết lập ngày. Chỉ những tệp mới hơn ngày đã chỉ định mới được hiển thị.
+-exec ls -al {} \;	Tùy chọn này thực thi lệnh được chỉ định, sử dụng dấu ngoặc nhọn làm ký tự giữ chỗ cho mỗi kết quả. Dấu gạch chéo ngược giúp tránh ký tự tiếp theo bị shell diễn giải, vì nếu không, dấu chấm phẩy sẽ kết thúc lệnh và không đến được lệnh chuyển hướng.
+2>/dev/null	Đây là STDERRlệnh chuyển hướng đến dấu ' null device', chúng ta sẽ quay lại vấn đề này ở phần sau. Lệnh chuyển hướng này đảm bảo không có lỗi nào được hiển thị trên terminal. Lệnh chuyển hướng này phải notlà một tùy chọn của lệnh 'find'.
