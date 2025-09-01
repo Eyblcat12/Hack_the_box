@@ -1,1 +1,57 @@
+/	Thư mục cấp cao nhất là hệ thống tệp gốc và chứa tất cả các tệp cần thiết để khởi động hệ điều hành trước khi các hệ thống tệp khác được gắn kết, cũng như các tệp cần thiết để khởi động các hệ thống tệp khác. Sau khi khởi động, tất cả các hệ thống tệp khác được gắn kết tại các điểm gắn kết tiêu chuẩn dưới dạng thư mục con của thư mục gốc.
+/bin	Chứa các lệnh nhị phân cần thiết.
+/boot	Bao gồm bộ nạp khởi động tĩnh, tệp thực thi kernel và các tệp cần thiết để khởi động hệ điều hành Linux.
+/dev	Chứa các tập tin thiết bị để tạo điều kiện truy cập vào mọi thiết bị phần cứng được kết nối với hệ thống.
+/etc	Tệp cấu hình hệ thống cục bộ. Tệp cấu hình cho các ứng dụng đã cài đặt cũng có thể được lưu tại đây.
+/home	Mỗi người dùng trên hệ thống đều có một thư mục con để lưu trữ.
+/lib	Các tệp thư viện được chia sẻ cần thiết cho quá trình khởi động hệ thống.
+/media	Các thiết bị lưu trữ ngoài như ổ USB được gắn ở đây.
+/mnt	Điểm gắn kết tạm thời cho các hệ thống tập tin thông thường.
+/opt	Các tập tin tùy chọn như công cụ của bên thứ ba có thể được lưu tại đây.
+/root	Thư mục gốc của người dùng root.
+/sbin	Thư mục này chứa các tệp thực thi được sử dụng cho quản trị hệ thống (tệp hệ thống nhị phân).
+/tmp	Hệ điều hành và nhiều chương trình sử dụng thư mục này để lưu trữ các tệp tạm thời. Thư mục này thường được xóa khi khởi động hệ thống và có thể bị xóa vào những thời điểm khác mà không cần cảnh báo trước.
+/usr	Chứa các tệp thực thi, thư viện, tệp man, v.v.
+/var	Thư mục này chứa các tệp dữ liệu biến đổi như tệp nhật ký, hộp thư đến email, tệp liên quan đến ứng dụng web, tệp cron, v.v.
+
+
+Dấu nhắc có thể được tùy chỉnh bằng các ký tự đặc biệt và biến trong tệp cấu hình shell ( .bashrcđối với shell Bash). Ví dụ: chúng ta có thể sử dụng: \uký tự để biểu thị tên người dùng hiện tại, \htên máy chủ và \wthư mục làm việc hiện tại.
+
+Ký tự đặc biệt	Sự miêu tả
+\d	Ngày (Thứ Hai, ngày 6 tháng 2)
+\D{%Y-%m-%d}	Ngày (YYYY-MM-DD)
+\H	Tên máy chủ đầy đủ
+\j	Số lượng công việc được quản lý bởi shell
+\n	Dòng mới
+\r	Xe ngựa trở về
+\s	Tên của vỏ
+\t	Thời gian hiện tại 24 giờ (HH:MM:SS)
+\T	Thời gian hiện tại 12 giờ (HH:MM:SS)
+\@	Thời gian hiện tại
+\u	Tên người dùng hiện tại
+\w	Đường dẫn đầy đủ của thư mục làm việc hiện tại
+
+ls -la .zsh_history
+
+cat .zsh_history => show lịch sử lệnh
+
+Yêu cầu	Sự miêu tả
+whoami	Hiển thị tên người dùng hiện tại.
+id	Trả về danh tính người dùng
+hostname	Đặt hoặc in tên hệ thống máy chủ hiện tại.
+uname	In thông tin cơ bản về tên hệ điều hành và phần cứng hệ thống.
+pwd	Trả về tên thư mục làm việc.
+ifconfig	Tiện ích ifconfig được sử dụng để gán hoặc xem địa chỉ cho giao diện mạng và/hoặc cấu hình các tham số giao diện mạng.
+ip	IP là một tiện ích để hiển thị hoặc thao tác định tuyến, thiết bị mạng, giao diện và đường hầm.
+netstat	Hiển thị trạng thái mạng.
+ss	Một tiện ích khác để điều tra ổ cắm.
+ps	Hiển thị trạng thái tiến trình.
+who	Hiển thị người đã đăng nhập.
+env	In môi trường hoặc thiết lập và thực thi lệnh.
+lsblk	Liệt kê các thiết bị khối.
+lsusb	Liệt kê các thiết bị USB
+lsof	Liệt kê các tập tin đã mở.
+lspci	Liệt kê các thiết bị PCI.
+
+
 
