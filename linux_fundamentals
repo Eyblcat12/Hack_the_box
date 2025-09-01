@@ -144,3 +144,24 @@ find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -
 -newermt 2020-03-03	Với tùy chọn này, chúng tôi sẽ thiết lập ngày. Chỉ những tệp mới hơn ngày đã chỉ định mới được hiển thị.
 -exec ls -al {} \;	Tùy chọn này thực thi lệnh được chỉ định, sử dụng dấu ngoặc nhọn làm ký tự giữ chỗ cho mỗi kết quả. Dấu gạch chéo ngược giúp tránh ký tự tiếp theo bị shell diễn giải, vì nếu không, dấu chấm phẩy sẽ kết thúc lệnh và không đến được lệnh chuyển hướng.
 2>/dev/null	Đây là STDERRlệnh chuyển hướng đến dấu ' null device', chúng ta sẽ quay lại vấn đề này ở phần sau. Lệnh chuyển hướng này đảm bảo không có lỗi nào được hiển thị trên terminal. Lệnh chuyển hướng này phải notlà một tùy chọn của lệnh 'find'.
+
+1.grep "^cry0l1t3:" /etc/passwd
+grep → tìm kiếm nội dung khớp pattern.
+"^cry0l1t3:" → ^ đảm bảo bắt đầu dòng, tránh khớp nhầm ở giữa dòng; : là ký tự phân cách username với các trường khác trong /etc/passwd.
+/etc/passwd → file cần đọc.
+2.cat /etc/passwd =>username:password:UID:GID:GECOS:home_directory:shell
+cry0l1t3:x:1001:1001::/home/cry0l1t3:/bin/bash
+=> chỉ lấy user =>  cut -d: -f1 /etc/passwd
+
+3.grep "^cry0l1t3:" /etc/passwd | cut -d: -f1,3
+
+4
+awk -F: '{print $1","$3","$7}' /etc/passwd
+awk -F: '!($7 ~ /nologin/) {print $1","$3","$7}' /etc/passwd | wc -l
+grep "^cry0l1t3:" /etc/passwd | awk -F: '{print $1","$3","$7}'
+ss -ltn | awk '$4 ~ /^0\.0\.0\.0:/' | wc -l
+ps aux | grep "proftpd" | grep -v "htb-stu+" | awk '{print $1}'
+
+
+
+
