@@ -164,4 +164,23 @@ ps aux | grep "proftpd" | grep -v "htb-stu+" | awk '{print $1}'
 
 
 
+| Ký hiệu   | Ý nghĩa |
+|-----------|---------|
+| ( )     | Dấu ngoặc tròn được sử dụng để nhóm các phần của biểu thức chính quy. Trong dấu ngoặc, bạn có thể định nghĩa thêm các mẫu cần được xử lý cùng nhau. |
+| [a-z]   | Dấu ngoặc vuông được dùng để định nghĩa các lớp ký tự. Bên trong dấu ngoặc, bạn có thể chỉ định danh sách các ký tự cần tìm kiếm. |
+| {1,10}  | Dấu ngoặc nhọn được dùng để định nghĩa lượng từ. Bên trong dấu ngoặc, bạn có thể chỉ định một số hoặc một phạm vi cho biết tần suất lặp lại của một mẫu trước đó. |
+| |       | Còn được gọi là toán tử OR và hiển thị kết quả khi một trong hai biểu thức khớp với nhau. |
+| .*      | Hoạt động tương tự như toán tử AND bằng cách chỉ hiển thị kết quả khi cả hai biểu thức đều có mặt và khớp theo thứ tự đã chỉ định. |
+
+cry0l1t3@htb:~$ grep -E "(my|false)" /etc/passwd
+lxd:x:105:65534::/var/lib/lxd/:/bin/false
+pollinate:x:109:1::/var/cache/pollinate:/bin/false
+mysql:x:116:120:MySQL Server,,:/nonexistent:/bin/false
+
+cry0l1t3@htb:~$ grep -E "(my.*false)" /etc/passwd
+mysql:x:116:120:MySQL Server,,:/nonexistent:/bin/false
+
+grep -E '^[^#]*$'
+
+
 
