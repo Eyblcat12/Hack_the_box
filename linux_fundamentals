@@ -183,4 +183,18 @@ mysql:x:116:120:MySQL Server,,:/nonexistent:/bin/false
 grep -E '^[^#]*$'
 
 
+9/7/2025 10.20pm
+Nhìn chung, chỉ có một vài mục tiêu mà chúng ta có khi xử lý một dịch vụ hoặc một quy trình:
+
+Bắt đầu/Khởi động lại dịch vụ/quy trình
+Dừng một dịch vụ/quy trình
+Xem những gì đang/đã xảy ra với một dịch vụ/quy trình
+Bật/Tắt dịch vụ/quy trình khi khởi động
+Tìm một dịch vụ/quy trình
+Sau khi cài đặt OpenSSHtrên VM, chúng ta có thể khởi động dịch vụ bằng lệnh sau.
+Quản lý dịch vụ và quy trình
+duchn12@htb[/htb]$ systemctl start ssh
+
+
+
 
